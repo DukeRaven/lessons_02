@@ -1,7 +1,6 @@
-package com.kirill;
+package com.kirill.firsttask;
 
 import java.util.Collection;
-import java.util.Objects;
 import java.util.Stack;
 
 /**
@@ -9,7 +8,8 @@ import java.util.Stack;
  */
 public class GenericStack<E> implements IStack<E> {
 
-    Stack<E> stack = new Stack<>();
+    private Stack<E> stack;
+    private int declaredSize;
 
     @Override
     public void push(E element) throws StackException {
@@ -20,7 +20,7 @@ public class GenericStack<E> implements IStack<E> {
 
     @Override
     public E pop() throws StackException {
-        if (isFull())
+        if (isEmpty())
             throw new StackException("Stack is empty");
         return stack.pop();
     }
@@ -42,7 +42,7 @@ public class GenericStack<E> implements IStack<E> {
 
     @Override
     public boolean isFull() {
-        return (stack.size() == 10);
+        return (stack.size() == declaredSize);
     }
 
     @Override
@@ -59,5 +59,13 @@ public class GenericStack<E> implements IStack<E> {
         }
     }
 
-    public GenericStack() {};
+    public GenericStack(int size) {
+        this.stack = new Stack<>();
+        this.declaredSize = size;
+    }
+
+    public GenericStack() {
+        this.stack = new Stack<>();
+        this.declaredSize = 10;
+    }
 }

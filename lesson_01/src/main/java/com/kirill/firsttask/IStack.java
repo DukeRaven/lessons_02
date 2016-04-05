@@ -1,4 +1,4 @@
-package com.kirill;
+package com.kirill.firsttask;
 
 import java.util.Collection;
 

@@ -1,4 +1,4 @@
-package com.kirill;
+package com.kirill.firsttask;
 
 /**
  * Created by Kirill on 04.04.2016.
