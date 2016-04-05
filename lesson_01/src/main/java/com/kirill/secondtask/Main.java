@@ -14,7 +14,7 @@ public class Main {
         //first variant
         List<String> s1 = Arrays.asList("aaa", "b", "cd");
         // Should return {b, cd , aaa}
-        Collections.sort(s1, new LengthComparator<String>() );
+        Collections.sort(s1, new LengthComparator() );
         System.out.println("s1 = " + s1.toString());
 
         //Second variant
