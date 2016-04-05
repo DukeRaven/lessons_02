@@ -9,7 +9,7 @@ public class LengthComparator<T> implements Comparator<T> {
 
     @Override
     public int compare(T o1, T o2) {
-        if ((o1 instanceof  String) && (o2 instanceof  String)) {
+        if ((o1 instanceof String) && (o2 instanceof String)) {
             String s1 = (String) o1;
             String s2 = (String) o2;
             if (s1.length() > s2.length())

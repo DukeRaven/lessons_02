@@ -22,6 +22,7 @@ public class FirstTaskTest {
         assertFalse(stack.isFull());
         assertEquals(0, stack.getSize());
 
+
         stack.push(new Integer(1));
         assertEquals(1, stack.getSize());
         assertEquals(value, stack.peek());
@@ -43,8 +44,6 @@ public class FirstTaskTest {
         Collections.sort(dstList);
         assertArrayEquals(srcList.toArray(), dstList.toArray());
     }
-
-
 
 
     @Test(expected = StackException.class)

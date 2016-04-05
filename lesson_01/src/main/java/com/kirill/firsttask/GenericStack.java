@@ -47,7 +47,7 @@ public class GenericStack<E> implements IStack<E> {
 
     @Override
     public void pushAll(Collection<? extends E> src) throws StackException {
-        for (E element : src ) {
+        for (E element : src) {
             push(element);
         }
     }
