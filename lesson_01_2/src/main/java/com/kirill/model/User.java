@@ -10,7 +10,6 @@ public class User {
 
     private String login;
     private String password;
-    HashSet<Account> accounts = new HashSet<>();
 
 
     public User(String login, String password) {
@@ -27,6 +26,22 @@ public class User {
 
         return login.equals(user.login);
 
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

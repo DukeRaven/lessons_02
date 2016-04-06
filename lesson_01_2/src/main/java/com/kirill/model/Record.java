@@ -32,6 +32,46 @@ public class Record {
 
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public boolean isIncoming() {
+        return isIncoming;
+    }
+
+    public void setIncoming(boolean incoming) {
+        isIncoming = incoming;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public float getAmount() {
+        return amount;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
