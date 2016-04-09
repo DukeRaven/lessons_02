@@ -19,6 +19,9 @@ public class Account {
         this.remainder = 0;
     }
 
+    public Account() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -57,5 +60,14 @@ public class Account {
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", remainder=" + remainder +
+                '}';
     }
 }

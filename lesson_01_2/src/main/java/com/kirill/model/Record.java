@@ -21,6 +21,9 @@ public class Record {
         this.description = description;
     }
 
+    public Record() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -75,5 +78,16 @@ public class Record {
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
+    }
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "id=" + id +
+                ", isIncoming=" + isIncoming +
+                ", date=" + date +
+                ", amount=" + amount +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

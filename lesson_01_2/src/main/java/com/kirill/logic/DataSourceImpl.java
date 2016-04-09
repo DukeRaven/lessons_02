@@ -52,6 +52,7 @@ public class DataSourceImpl implements IDataSource {
     @Override
     public void addAccount(User user, Account account) {
         HashSet<Account> userAccounts = (HashSet<Account>) getAccounts(user);
+        account.setId(getNextId());
         userAccounts.add(account);
         accounts.put(user, userAccounts);
     }
@@ -59,6 +60,7 @@ public class DataSourceImpl implements IDataSource {
     @Override
     public void addRecord(Account account, Record record) {
         HashSet<Record> accountRecords = (HashSet<Record>) getRecords(account);
+        record.setId(getNextId());
         accountRecords.add(record);
         records.put(account, accountRecords);
     }
